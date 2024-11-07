@@ -1,34 +1,34 @@
 // create the work object
 let worksObject = [
   {
-    name: "Blog",
-    link: "https://moyssar.github.io/",
-    imglink: "images/",
-    // worklink:"",
-  },
-  {
     name: "Corona",
     link: "https://moyssar.github.io/",
     imglink: "images/",
-    // worklink:"",
   },
   {
-    name: "Foody",
+    name: "Blog",
     link: "https://moyssar.github.io/",
     imglink: "images/",
-    // worklink:"",
-  },
-  {
-    name: "NobodysFool",
-    link: "https://moyssar.github.io/",
-    imglink: "images/",
-    // worklink:"",
   },
   {
     name: "SpecialTemplate",
     link: "https://moyssar.github.io/",
     imglink: "images/",
-    // worklink:"",
+  },
+  {
+    name: "UST",
+    link: "https://moyssar.github.io/",
+    imglink: "images/",
+  },
+  {
+    name: "Foody",
+    link: "https://moyssar.github.io/",
+    imglink: "images/",
+  },
+  {
+    name: "NobodysFool",
+    link: "https://moyssar.github.io/",
+    imglink: "images/",
   },
 ];
 
