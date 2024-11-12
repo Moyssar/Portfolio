@@ -35,6 +35,7 @@ button {
   --header-color: #000;
   --light-background-color: #ddddde;
   --logo: #000;
+  --section-color: #fff;
 }
 /* globle */
 .container {
@@ -47,6 +48,9 @@ ul {
 }
 section:not(section#intro) {
   padding: 60px 0;
+}
+section {
+  background-color: var(--section-color);
 }
 .dark-section {
   background-color: var(--light-background-color);

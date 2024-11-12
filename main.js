@@ -56,6 +56,7 @@ let headerColor = localStorage.getItem("header_color");
 let lightBackgroundColor = localStorage.getItem("light_background_color");
 let logo = localStorage.getItem("logo_color");
 let modeTogglerLocal = localStorage.getItem("toggler");
+let sectionColor = localStorage.getItem("section_color");
 
 // check for localstorge values
 if (
@@ -66,7 +67,8 @@ if (
   headerColor !== null ||
   lightBackgroundColor !== null ||
   logo !== null ||
-  modeTogglerLocal !== null
+  modeTogglerLocal !== null ||
+  sectionColor !== null
 ) {
   // get stored data
   localStorage.getItem(textColor);
@@ -77,6 +79,7 @@ if (
   localStorage.getItem(lightBackgroundColor);
   localStorage.getItem(logo);
   localStorage.getItem(modeTogglerLocal);
+  localStorage.getItem(sectionColor);
   // apply stored data
   document.documentElement.style.setProperty("--text-color", textColor);
   document.documentElement.style.setProperty("--gray-text", grayText);
@@ -91,6 +94,7 @@ if (
     lightBackgroundColor
   );
   document.documentElement.style.setProperty("--logo", logo);
+  document.documentElement.style.setProperty("--section-color", sectionColor);
   modeToggler.setAttribute("class", modeTogglerLocal);
 }
 // ******* ******* ******* local srotage
@@ -102,7 +106,6 @@ modeToggler.addEventListener("click", (e) => {
     modeToggler.setAttribute("class", "fa fa-fw fa-sun active");
     modeTogglerLocal = "fa fa-fw fa-sun active";
     // change the body background color to black
-    document.body.style.backgroundColor = "#000";
     // change the :root css variables values
     document.documentElement.style.setProperty("--text-color", "#888");
     document.documentElement.style.setProperty("--gray-text", "#999");
@@ -111,23 +114,24 @@ modeToggler.addEventListener("click", (e) => {
     document.documentElement.style.setProperty("--header-color", "#ccc");
     document.documentElement.style.setProperty(
       "--light-background-color",
-      "#090909"
+      "#151515"
     );
     document.documentElement.style.setProperty("--logo", "#fff");
+    document.documentElement.style.setProperty("--section-color", "#000");
     // update data on localstorage
     localStorage.setItem("text_color", "#888");
     localStorage.setItem("gray_text", "#999");
     localStorage.setItem("light_gray_text", "#999");
     localStorage.setItem("main_color", "#8da26a");
     localStorage.setItem("header_color", "#ccc");
-    localStorage.setItem("light_background_color", "#090909");
+    localStorage.setItem("light_background_color", "#151515");
     localStorage.setItem("logo_color", "#fff");
+    localStorage.setItem("section_color", "#000");
     localStorage.setItem("toggler", modeTogglerLocal);
   } else {
     modeToggler.setAttribute("class", "fa fa-fw fa-moon");
     modeTogglerLocal = "fa fa-fw fa-moon";
     // change the body background color to black
-    document.body.style.backgroundColor = "#fff";
     // change the :root css variables values
     document.documentElement.style.setProperty("--text-color", "#070613");
     document.documentElement.style.setProperty("--gray-text", "#333");
@@ -139,6 +143,7 @@ modeToggler.addEventListener("click", (e) => {
       "#ddddde"
     );
     document.documentElement.style.setProperty("--logo", "#000");
+    document.documentElement.style.setProperty("--section-color", "#fff");
     // update data on localstorage
     localStorage.setItem("text_color", "#070613");
     localStorage.setItem("gray_text", "#333");
@@ -147,6 +152,7 @@ modeToggler.addEventListener("click", (e) => {
     localStorage.setItem("header_color", "#000");
     localStorage.setItem("light_background_color", "#ddddde");
     localStorage.setItem("logo_color", "#000");
+    localStorage.setItem("section_color", "#fff");
     localStorage.setItem("toggler", modeTogglerLocal);
   }
 });
